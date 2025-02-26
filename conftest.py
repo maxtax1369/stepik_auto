@@ -9,7 +9,6 @@ def pytest_addoption(parser):
 def browser(request):
     user_language = request.config.getoption("language")
     options = Options()
-    # options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
     options.add_argument(f"--lang={user_language}")
 
     print(f"\nstart {user_language} browser for test..")
